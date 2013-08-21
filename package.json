@@ -1,0 +1,39 @@
+{
+  "name": "generator-impress",
+  "version": "0.0.1",
+  "description": "A Impress.js generator for Yeoman",
+  "keywords": [
+    "generator-impress",
+    "yeoman-generator"
+  ],
+  "homepage": "https://github.com/slara/generator-impress",
+  "bugs": "https://github.com/slara/generator-impress/issues",
+  "author": {
+    "name": "Sebastian Lara Menares",
+    "email": "",
+    "url": "https://github.com/slara"
+  },
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/slara/generator-impress.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "yeoman-generator": "~0.13.1"
+  },
+  "devDependencies": {
+    "yo": ">=1.0.0-rc.1.1",
+    "generator-mocha": "~0.1.1"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}
