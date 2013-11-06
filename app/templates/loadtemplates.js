@@ -1,4 +1,5 @@
-// Modified from markdown.js from Hakim to handle external html files
+/* global document, XMLHttpRequest, xhr, alert
+ */
 
 (function () {
     var querySlidingHtml = function() {
@@ -30,7 +31,7 @@
                 } catch (e) {
                     alert('Failed to get file' + url + '.' + e);
                 }
-            };
+            }
         }
     };
 

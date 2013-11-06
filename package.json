@@ -1,8 +1,11 @@
 {
   "name": "generator-impress",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A Impress.js generator for Yeoman",
   "keywords": [
+    "impress.js",
+    "presentation",
+    "yeoman",
     "generator-impress",
     "yeoman-generator"
   ],
@@ -10,7 +13,7 @@
   "bugs": "https://github.com/slara/generator-impress/issues",
   "author": {
     "name": "Sebastian Lara Menares",
-    "email": "",
+    "email": "slaramen@gmail.com",
     "url": "https://github.com/slara"
   },
   "main": "app/index.js",
@@ -19,21 +22,25 @@
     "url": "git://github.com/slara/generator-impress.git"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "grunt test"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0-rc.1.1"
   },
   "dependencies": {
     "yeoman-generator": "~0.13.4"
   },
   "devDependencies": {
-    "yo": ">=1.0.4",
-    "generator-mocha": "~0.1.1"
+    "grunt": "~0.4.1",
+    "load-grunt-tasks": "~0.2.0",
+    "grunt-mocha-test": "~0.7.0",
+    "grunt-contrib-jshint": "~0.7.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3"
   },
   "engines": {
-    "node": ">=0.8.0"
+    "node": ">=0.8.0",
+    "npm": ">=1.2.10"
   },
-  "licenses": [
-    {
-      "type": "MIT"
-    }
-  ]
+  "license": "MIT" 
 }
