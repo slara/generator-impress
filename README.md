@@ -1,5 +1,7 @@
 # Generator-impress
 
+[![Build Status](https://travis-ci.org/slara/generator-impress.png?branch=master)](https://travis-ci.org/slara/generator-impress)
+
 A Yeoman generator for the breathtaking Impress.js presentation framework.
 http://bartaz.github.io/impress.js/
 
