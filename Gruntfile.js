@@ -26,16 +26,18 @@ module.exports = function (grunt) {
                 src: ['test/*.js']
             }
         },
-        clean: {
-            test: {
-                src: ['test/temp']
+        clean:  {
+            all: {
+                files: {
+                    src: ['test/temp/']
+                }
             }
         }
     });
 
     grunt.registerTask('test', [
-        'jshint',
         'clean',
+        'jshint',
         'mochaTest',
         'clean'
     ]);
