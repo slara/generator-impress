@@ -1,4 +1,4 @@
 {
-  "name": "<%= presentationTitle %>",
+  "name": "<%= presentationTitle.replace(/"/g, '\\"') %>",
   "impressConsole": <%= impressConsole %>
 }
