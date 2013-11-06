@@ -10,7 +10,8 @@
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
-    <link href="bower_components/impress.js/css/impress-demo.css" rel="stylesheet" />
+    <link href="bower_components/impress.js/css/impress-demo.css" rel="stylesheet" /><% if (impressConsole) { %>
+    <link href="css/impressConsole.css" rel="stylesheet" /><% } %>
     <link href="css/main.css" rel="stylesheet" />
 
 
@@ -26,7 +27,8 @@
 
   <script src="bower_components/jquery/jquery.js"></script>
   <script src="bower_components/handlebars/handlebars.js"></script>
-  <script src="bower_components/impress.js/js/impress.js"></script>
+  <script src="bower_components/impress.js/js/impress.js"></script><% if (impressConsole) { %>
+  <script src="js/impressConsole.js"></script><% } %>
   <script src="js/main.js"></script>
 
   <script id="step-template" type="x-handlebars-template">
@@ -39,7 +41,8 @@
   $.getJSON('steps/list.json', function(data) {
     // Append ordered slides
     appendSlides(data);
-    impress().init();
+    impress().init();<% if (impressConsole) { %>
+    impressConsole().init();<% } %>
   });
   </script>
 

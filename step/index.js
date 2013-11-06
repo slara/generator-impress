@@ -12,8 +12,10 @@ var StepGenerator = module.exports = function StepGenerator(args, options, confi
 
     console.log('You called the step subgenerator with the argument ' + this.name + '.');
 
+    config = config || require(path.join(process.cwd(), '/config.json'));
     this.id = this._.slugify(this.name);
     this.filename = this.id + '.html';
+    this.impressConsole = options.impressConsole || config.impressConsole || false;
 };
 
 util.inherits(StepGenerator, yeoman.generators.NamedBase);

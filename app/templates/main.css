@@ -1,4 +1,8 @@
-.step h2 {
+<% if (impressConsole) { %>.notes {
+    display:none;
+}
+
+<% } %>.step h2 {
     font-size: 78px;
     font-weight: bold;
 }
