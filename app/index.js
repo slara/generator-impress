@@ -28,11 +28,18 @@ ImpressGenerator.prototype.askFor = function askFor() {
     name: 'packageVersion',
     message: 'What version should we put in the package.json file?',
     default: '0.0.1'
+  },
+  {
+    type: 'confirm',
+    name: 'impressConsole',
+    message: 'Would you like to include the impress-console?',
+    default: true
   }];
 
   this.prompt(prompts, function (props) {
     this.presentationTitle = props.presentationTitle;
     this.packageVersion = props.packageVersion;
+    this.impressConsole = props.impressConsole;
     cb();
   }.bind(this));
 };
@@ -48,6 +55,10 @@ ImpressGenerator.prototype.app = function app() {
   this.template('_config.json', 'config.json');
   this.copy('main.css', 'css/main.css');
   this.copy('main.js', 'js/main.js');
+  if (this.impressConsole) {
+    this.copy('impressConsole.css', 'css/impressConsole.css');
+    this.copy('impressConsole.js', 'js/impressConsole.js');
+  }
   this.template('start.html', 'steps/start.html');
   this.copy('list.json', 'steps/list.json');
 };
