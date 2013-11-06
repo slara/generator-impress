@@ -24,15 +24,27 @@ StepGenerator.prototype.files = function files() {
     this.template('step.html', fullfilename);
     var fullPath = path.join(appPath, '/steps/list.json');
     var list = require(fullPath);
+    var X = 3000,
+        Y = 0,
+        Z = 0;
+
+    if (list.length > 1) {
+        var lastItem = list[list.length - 1],
+            ntlItem = list[list.length - 2];
+        X = 2 * lastItem.data.x - ntlItem.data.x;
+        Y = 2 * lastItem.data.y - ntlItem.data.y;
+        Z = 2 * lastItem.data.z - ntlItem.data.z;
+    }
+
     list.push(
     {
         uri: this.filename,
         id: this.id,
         class: 'step',
         data: {
-            x: 3000,
-            y: 0,
-            z: 0,
+            x: X,
+            y: Y,
+            z: Z,
             scale: 1,
             "rotate-x": 0,
             "rotate-y": 0,
