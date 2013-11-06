@@ -61,7 +61,11 @@ And the step filename will be added to your `steps/list.json` file with position
         "data": {
             "x": 0,
             "y": 0,
-            "scale": 4
+            "z": 0,
+            "scale": 4,
+            "rotate-x": 0,
+            "rotate-y": 0,
+            "rotate-z": 0
         }
     },
     {
@@ -71,8 +75,11 @@ And the step filename will be added to your `steps/list.json` file with position
         "data": {
             "x": 3000,
             "y": 0,
+            "z": 0,
             "scale": 1,
-            "rotate": 90
+            "rotate-x": 0,
+            "rotate-y": 0,
+            "rotate-z": 90
         }
     }
 ]
