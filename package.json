@@ -1,6 +1,6 @@
 {
   "name": "generator-impress",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Impress.js generator for Yeoman",
   "keywords": [
     "impress.js",
