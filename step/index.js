@@ -32,8 +32,11 @@ StepGenerator.prototype.files = function files() {
         data: {
             x: 3000,
             y: 0,
+            z: 0,
             scale: 1,
-            rotate: 90
+            "rotate-x": 0,
+            "rotate-y": 0,
+            "rotate-z": 90
         }
     });
     fs.writeFileSync(fullPath, JSON.stringify(list, null, 4));
