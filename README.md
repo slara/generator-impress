@@ -87,7 +87,7 @@ And the step filename will be added to your `steps/list.json` file with position
 ]
 ```
 
-You can add your own `data-` attributes but be carefull, as the file has to be valid `json`. 
+You can add your own `data-` attributes but be careful, as the file has to be valid `json`. 
 
 
 ## License
